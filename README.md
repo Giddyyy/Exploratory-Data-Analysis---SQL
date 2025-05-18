@@ -10,7 +10,7 @@ The goal is to derive actionable insights for cross-selling, transaction behavio
 ## 📁 Tables Used
 ~ users_customuser – Contains user profile information (e.g., name, date joined).
 
-~ savings_savingsaccount – Logs all transactions (inflows and outflows) per customer.
+~ savings_savingsaccount – Logs all transactions per customer.
 
 ~ plans_plan – Contains plan metadata including whether a plan is a regular savings or an investment fund
 
@@ -30,6 +30,8 @@ Approach:
   •	Count distinct funded plans per type (savings vs investment) per customer.
   
   •	Sum total deposits using confirmed_amount.
+
+  • Converted total deposits from kobo to naira and rounded up.
   
   •	Final query summary:
   
