@@ -135,4 +135,81 @@ to simulate monthly truncation in MySQL
 
 •	Solution: Clarified scope and aligned expectations accordingly — results were intentional subsets, not total population metrics.
 
+## 🧠 General Approach
+
+For each analysis task, I followed a structured and repeatable process to ensure clarity, accuracy, and adaptability:
+
+### 1. Understand the Business Scenario
+
+  Each task began with a clear understanding of the business goal.
+
+### 2. Inspect Data Structure
+
+I reviewed all relevant tables (users_customuser, savings_savingsaccount, plans_plan) to:
+
+  •	Identify necessary fields
+  
+  •	Understand foreign key relationships
+  
+  •	Note available data types (dates, booleans, monetary values)
+
+### 3. Define Metrics Clearly
+
+For each output column (e.g., total_deposits, tenure_months, frequency_category), I:
+
+  •	Established logic for calculation
+  
+  •	Verified assumptions and given parameters (e.g., inflow = confirmed_amount).
+
+### 4. Build Step-by-Step Queries
+  
+  Rather than writing complex queries all at once, I:
+  
+  •	Built each column independently
+  
+  •	Validated results and assumptions
+  
+  •	Gradually combined them into a full query, often using CTEs for clarity where necessary
+
+### 5. Handle Edge Cases and Data Quality
+
+  •	Ensured monetary values were converted from kobo to naira
+  
+  •	Filtered transactions by recency or status when relevant
+  
+  •	Used COALESCE and conditional logic to handle nulls and prevent skewed results
+
+### 6. Test and Refine
+
+Every query was tested iteratively:
+
+  •	Debugged errors (syntax, logic, joins)
+  
+  •	Compared intermediate outputs against expectations
+  
+  •	Cleaned and structured the final results to match business-friendly formats
+
+### 7. Document the Query
+
+Each query includes clear inline comments to explain:
+  
+  •	Joins and filters
+  
+  •	Aggregations and logic
+  
+  •	Business reasoning (e.g., why a certain threshold or classification is used)
+
+## ✅ Tools & Skills Demonstrated
+  
+  •	SQL Joins & Aggregations
+  
+  •	CTE usage
+  
+  •	Conditional logic (CASE)
+  
+  •	Date and time calculations
+  
+  •	Data cleaning and formatting (e.g., kobo to naira)
+  
+  •	Customer segmentation logic
 
