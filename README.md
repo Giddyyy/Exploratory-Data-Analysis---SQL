@@ -20,7 +20,7 @@ Approach:
   •	Final query aggregates this into a customer-wise summary:
     -->	owner_id | full name | savings_count | investment_count | total_deposits
 
-## 🧩 Task 2: Transaction Frequency Analysis
+## 🧩 Q2: Transaction Frequency Analysis
 Objective: Segment customers based on how often they transact monthly.
 Approach:
   •	Limit to the last 12 months of data while storing into a temp table (cte) to be able to call it back for reference in the following subqueries.
