@@ -99,4 +99,40 @@ Approach:
 
     --> customer_id | full name | tenure_months | total_transactions | estimated_clv
 
-## Challenges and Solutions
+## 💡 Challenges and Solutions
+
+### 1. Query Structuring & Readability
+
+• Challenge: Queries became complex, especially when categorizing or computing over derived values.
+
+• Solution: Broke queries into modular CTEs (Common Table Expressions) for clarity and reusability, then combined them into final outputs
+
+### 2. SQL Function Compatibility
+
+•	Challenge: Some SQL functions like DATE_TRUNC were not supported in my environment.
+
+•	Solution: Replaced with portable alternatives like:
+
+    --> DATE_FORMAT(current_date, '%Y-%m-01')
+
+to simulate monthly truncation in MySQL
+
+### 3. Syntax & Debugging Errors
+
+•	Challenge: Faced multiple errors due to:
+
+  •	Misplaced parentheses (e.g., in ROUND())
+  
+  •	Incorrect CASE syntax 
+
+•	Solution: Resolved by isolating subqueries, testing piece by piece, and cleaning up SQL syntax as in order.
+
+### 4. Partial User Representation in Outputs
+
+•	Challenge: Not all users from users_customuser appeared in transaction-based outputs. This was evident in Q3 as the total customer count in the results did not tally with the overall registered users.
+
+•	Reason: Only customers with valid transactions in the last 12 months were counted in frequency or CLV tasks.
+
+•	Solution: Clarified scope and aligned expectations accordingly — results were intentional subsets, not total population metrics.
+
+
