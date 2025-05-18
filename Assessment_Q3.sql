@@ -17,7 +17,7 @@ join plans_plan p
 	on s.plan_id = p.id
 -- Aggregrate function MAX requiring a group by to execute query
 group by s.plan_id, s.owner_id, p.is_regular_savings, p.is_a_fund
--- Since Inactivity range is within the last year, that is 365 days
-having datediff(current_date, max(s.transaction_date)) <= 365
+-- Since Inactivity range is > 365 days
+having datediff(current_date, max(s.transaction_date)) > 365
 order by inactivity_days 
 ;
