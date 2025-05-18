@@ -7,18 +7,28 @@ This project focuses on analyzing customer behavior and financial activity using
 ~ users_customuser – Contains user profile information (e.g., name, date joined).
 
 ~ savings_savingsaccount – Logs all transactions (inflows and outflows) per customer.
+
 ~ plans_plan – Contains plan metadata including whether a plan is a regular savings or an investment fund
 
 ## 🧩 Q1: Cross-Selling Opportunity
 Objective: Identify customers with funded savings and investment plans, to target for cross-sell campaigns.
+
 Approach:
+
   •	Filter plans_plan where:
+  
       •	is_regular_savings = 1 for savings
+      
       •	is_a_fund = 1 for investments
+  
   •	Join with savings_savingsaccount to check for confirmed inflows (confirmed_amount > 0).
+  
   •	Count distinct funded plans per type (savings vs investment) per customer.
+  
   •	Sum total deposits using confirmed_amount.
+  
   •	Final query summary:
+  
     -->	owner_id | full name | savings_count | investment_count | total_deposits
 
 ## 🧩 Q2: Transaction Frequency Analysis
