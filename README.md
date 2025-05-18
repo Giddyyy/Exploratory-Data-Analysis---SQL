@@ -14,7 +14,7 @@ The goal is to derive actionable insights for cross-selling, transaction behavio
 
 ~ plans_plan – Contains plan metadata including whether a plan is a regular savings or an investment fund
 
-## 🧩 Q1: Cross-Selling Opportunity
+### 🧩 Q1: Cross-Selling Opportunity
 Objective: Identify customers with funded savings and investment plans, to target for cross-sell campaigns.
 
 Approach:
@@ -35,7 +35,7 @@ Approach:
   
     -->	owner_id | full name | savings_count | investment_count | total_deposits
 
-## 🧩 Q2: Transaction Frequency Analysis
+### 🧩 Q2: Transaction Frequency Analysis
 
 Objective: Segment customers based on how often they transact monthly.
 
@@ -61,7 +61,7 @@ Approach:
   
     --> frequency_category | customer_count | avg_transactions_per_month
 
-## 🧩 Q3: Account Inactivity Alert
+### 🧩 Q3: Account Inactivity Alert
 
 Objective: Detect savings or investment accounts that haven’t had any inflow for over a year.
 
@@ -79,7 +79,7 @@ Approach:
   
     --> plan_id | owner_id | account type | last_transaction_date | no. of days inactive
 
-## 🧩 Q4: Customer Lifetime Value (CLV)
+### 🧩 Q4: Customer Lifetime Value (CLV)
 
 Objective: Estimate how much value each customer brings over their account lifetime.
 
@@ -98,3 +98,5 @@ Approach:
 •	Final query summary:
 
     --> customer_id | full name | tenure_months | total_transactions | estimated_clv
+
+## Challenges and Solutions
