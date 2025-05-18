@@ -8,11 +8,11 @@ The data spans across multiple tables, including customer details, savings accou
 The goal is to derive actionable insights for cross-selling, transaction behavior, inactivity monitoring, and customer lifetime value estimation.
 
 ## 📁 Tables Used
-~ users_customuser – Contains user profile information (e.g., name, date joined).
+~ users_customuser – Contains customer demographic and contact information.
 
-~ savings_savingsaccount – Logs all transactions per customer.
+~ savings_savingsaccount – Contains records of deposit transactions.
 
-~ plans_plan – Contains plan metadata including whether a plan is a regular savings or an investment fund
+~ plans_plan – Contains records of plans created by customers including whether a plan is a regular savings or an investment fund.
 
 ### 🧩 Q1: Cross-Selling Opportunity
 Objective: Identify customers with funded savings and investment plans, to target for cross-sell campaigns.
