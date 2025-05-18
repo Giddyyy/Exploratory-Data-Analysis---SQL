@@ -7,7 +7,7 @@ The data spans across multiple tables, including customer details, savings accou
 
 The goal is to derive actionable insights for cross-selling, transaction behavior, inactivity monitoring, and customer lifetime value estimation.
 
-# 📁 Tables Used
+## 📁 Tables Used
 ~ users_customuser – Contains user profile information (e.g., name, date joined).
 
 ~ savings_savingsaccount – Logs all transactions (inflows and outflows) per customer.
