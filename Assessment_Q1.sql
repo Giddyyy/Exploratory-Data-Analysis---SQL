@@ -10,7 +10,7 @@ CONCAT(u.first_name, ' ', u.last_name) AS `name`,
 -- The addition of the above is to ensure that this script works immediately even if the name column is yet to be populated
 COALESCE(s.savings_count, 0) AS savings_count,
 COALESCE(i.investment_count, 0) AS investment_count,
-COALESCE(d.total_deposits, 0) AS total_deposits
+ROUND(COALESCE(d.total_deposits, 0), 2) AS total_deposits
 from users_customuser as u
 -- Adding the savings_count column
 left join (
@@ -28,7 +28,8 @@ left join (
 ) i on u.id = i.owner_id
 -- Adding the total_deposits column
 left join (
-		select owner_id, sum(confirmed_amount) as total_deposits
+		select owner_id, 
+        sum(confirmed_amount) / 100 as total_deposits -- converting from kobo to naira
 		from savings_savingsaccount
 		group by owner_id
 ) d on u.id = d.owner_id
