@@ -5,6 +5,7 @@ This project focuses on analyzing customer behavior and financial activity using
 
 # 📁 Tables Used
 ~ users_customuser – Contains user profile information (e.g., name, date joined).
+
 ~ savings_savingsaccount – Logs all transactions (inflows and outflows) per customer.
 ~ plans_plan – Contains plan metadata including whether a plan is a regular savings or an investment fund
 
