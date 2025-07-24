@@ -1,5 +1,5 @@
 select u.id as customer_id,
--- Assuming 'name' column hasn't been populated up till this point
+-- Assuming 'name' column hasn't been populated up till this point...
 concat(u.first_name, ' ', last_name) as `name`,
 -- Account Tenure: Months since signup(date_joined)
 -- Datediff returns values in days, so using TIMESTAMPDIFF instead as it is more flexible
