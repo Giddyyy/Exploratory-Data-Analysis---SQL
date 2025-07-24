@@ -1,5 +1,5 @@
 -- Column for average monthly transaction(s) of each customer
--- Creating a cte for ease this query invloves calculations and referencing results
+-- Creating a cte for ease this query invloves calculations and referencing results..
 
 with avg_trx_per_customer as (
 		select owner_id, count(*) / 12 as avg_trx_per_month -- average monthly transaction per customer
