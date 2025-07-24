@@ -2,7 +2,7 @@
 -- Checked or duplicates and found none
 -- Name column (first + last names) already exists in table, populated that beforehand
 -- Generated queries for each columns
--- Combined all subqueries to produce the expected table
+-- Combined all subqueries to produce the expected table...
 
 select u.id as owner_id,
 -- Adding the concatenation of first and last names to form the 'name' column since the original dataset does not have it populated
